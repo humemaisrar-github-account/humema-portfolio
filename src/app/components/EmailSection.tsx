@@ -25,7 +25,7 @@ const ContactSection = () => {
         </p>
 
         <motion.form
-          action="https://formsubmit.co/b42fc06bc451124fd3a0587ebf6b07d3"
+          action="https://formsubmit.co/humema.israr09@gamil.com"
           method="POST"
           whileHover={{ scale: 1.01 }}
           className="bg-[#1c1c1c]/50 backdrop-blur-md border border-[#33353f] rounded-xl p-8 md:p-10 shadow-lg space-y-6"

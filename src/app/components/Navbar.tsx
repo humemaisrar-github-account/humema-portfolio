@@ -38,7 +38,7 @@ const Navbar = () => {
           href={"/"}
           className="text-2xl md:text-5xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-pink-600"
         >
-          Humema Israr
+          💢
         </Link>
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (
@@ -71,5 +71,6 @@ const Navbar = () => {
     </nav>
   );
 };
+
 
 export default Navbar;

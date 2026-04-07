@@ -1,9 +1,19 @@
 import type { Metadata } from "next";
- 
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
- 
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
- title: "Humema Israr – Frontend Developer Portfolio",
+  title: "Humema Israr – Frontend Developer Portfolio",
   description:
     "Official portfolio of Humema Israr, a passionate frontend developer skilled in Next.js, Tailwind CSS, TypeScript, and UI/UX design. Built as part of the GIAIC AI program.",
   keywords: [
@@ -21,11 +31,11 @@ export const metadata: Metadata = {
     title: "Humema Israr – Frontend Developer Portfolio",
     description:
       "Explore the projects, skills, and creativity of Humema Israr, a frontend web developer building modern, responsive websites using cutting-edge tools.",
-    url: "https://humema-portfolio.vercel.app", 
+    url: "https://humema-portfolio.vercel.app",
     siteName: "Humema Israr Portfolio",
     images: [
       {
-        url: "/preview.png", 
+        url: "/preview.png",
         width: 1200,
         height: 630,
         alt: "Humema Portfolio Preview",
@@ -37,7 +47,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Humema Israr – Portfolio",
     description: "View the personal portfolio of Humema Israr.",
-    creator: "@humemaI18190",  
+    creator: "@humemaI18190",
     images: ["/preview.png"],
   },
 };
@@ -48,13 +58,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body
-        
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
       </body>
     </html>
   );
 }
- 

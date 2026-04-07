@@ -19,8 +19,157 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0e0e0e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #a855f7, #ec4899);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #9333ea, #db2777);
+}
+
+/* Blob animation */
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* Gradient text animation */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Slide up animation */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slideUp {
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+/* Pulse glow animation */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(236, 72, 153, 0.6);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Utility classes */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Selection color */
+::selection {
+  background-color: rgba(168, 85, 247, 0.3);
+  color: white;
+}
+
+/* Focus visible styles */
+*:focus-visible {
+  outline: 2px solid #a855f7;
+  outline-offset: 2px;
 }

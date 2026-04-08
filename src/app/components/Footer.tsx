@@ -9,10 +9,10 @@ const Footer = () => {
 
   const footerLinks = [
     { title: "Quick Links", links: [
-      { label: "Home", href: "#" },
-      { label: "About", href: "#about" },
-      { label: "Skills", href: "#skill" },
-      { label: "Projects", href: "#project" },
+      { label: "Home", href: "#", external: false },
+      { label: "About", href: "#about", external: false },
+      { label: "Skills", href: "#skill", external: false },
+      { label: "Projects", href: "#project", external: false },
     ]},
     { title: "Connect", links: [
       { label: "LinkedIn", href: "https://www.linkedin.com/in/humema-israr-b184342b5", external: true },

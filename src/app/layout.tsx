@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://humema-portfolio.vercel.app"),
   title: "Humema Israr – Frontend Developer Portfolio",
   description:
     "Official portfolio of Humema Israr, a passionate frontend developer skilled in Next.js, Tailwind CSS, TypeScript, and UI/UX design. Built as part of the GIAIC AI program.",
